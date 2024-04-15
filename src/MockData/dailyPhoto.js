@@ -6,7 +6,7 @@ const dailyPhoto = {
     "media_type": "image",
     "service_version": "v1",
     "title": "Palm Tree Partial Eclipse",
-    "url": "https://apod.nasa.gov/apod/image/2404/pinholepalm1024.png"
+    "url": "https://apod.nasa.gov/apod/image/2404/2024_Eclipse_05XTan.jpg"
 }
 
 module.exports = dailyPhoto;

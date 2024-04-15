@@ -1,6 +1,7 @@
 import AsteroidCard from '../AsteroidCard/AsteroidCard'
 import './Home.css'
 import React, { useState, useEffect } from 'react'
+import { NavLink } from 'react-router-dom'
 
 
 function Home({ asteroids, photo, loading }) {
@@ -38,7 +39,7 @@ function Home({ asteroids, photo, loading }) {
                 <article className='homepage-asteroids'>
                     {homeAsteroids}
                 </article>
-                <button>View all</button>
+               <NavLink to='/asteroids' className='view-asteroids'>View All</NavLink>
             </article>
         </section>
     )

@@ -56,7 +56,7 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading}/>} />
-          <Route path="/asteroids" element={<Asteroids />} />
+          <Route path="/asteroids" element={<Asteroids asteroids={asteroids}/>} />
           {/* <Route path="/asteroids/:id"  /> */}
           <Route path="*" element={<NotFound />} />
         </Routes>
