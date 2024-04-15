@@ -5,7 +5,7 @@ function AsteroidDetails ({asteroids}) {
 
     return (
         <article className='asteroid-details'>
-
+            
         </article>
     )
 }
