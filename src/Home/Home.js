@@ -1,16 +1,43 @@
+import AsteroidCard from '../AsteroidCard/AsteroidCard'
 import './Home.css'
-// import React from 'react'
+import React, { useState, useEffect } from 'react'
 
-function Home({ photo, asteroids }) {
-    console.log(photo.url)
+
+function Home({ asteroids, photo, loading }) {
+    const [homeAsteroids, sliceAsteroids] = useState([])
+
+    useEffect(() => {
+        showAsteroids()
+    }, [asteroids])
+
+    const showAsteroids = () => {
+        if (asteroids) {
+            const fourAsteroids = asteroids.slice(0, 4).map((asteroid) => {
+                return (
+                    <AsteroidCard key={asteroid.id} asteroid={asteroid} />
+                )
+            })
+            sliceAsteroids(fourAsteroids)
+        }
+    }
+
+    if (loading === 'true') {
+        return <p className='loading'>Loading...</p>
+    }
     return (
         <section className='homepage'>
-            <h2>NASA's image of the day</h2>
             <article className='daily-photo' style={{ backgroundImage: `url(${photo.url})` }}>
-                <h3 className='daily-photo-title'>{photo.title}</h3>
-                <p className='daily-photo-cite'>{photo.copyright}</p>
-                <p className='daily-photo-explanation'>{photo.explanation}</p>
+                <div className='daily-photo-info'>
+                    <h2>Astronomy Picture of the Day</h2>
+                    <h3 className='daily-photo-title'>{photo.title}</h3>
+                    <p className='daily-photo-cite'>{photo.copyright}</p>
+                    <p className='daily-photo-explanation'>{photo.explanation}</p>
+                    <a href={photo.url}>View Fullsize Image</a>
+                </div>
                 <h3>Today's Asteroids</h3>
+                <article className='homepage-asteroids'>
+                    {homeAsteroids}
+                </article>
                 <button>View all</button>
             </article>
         </section>

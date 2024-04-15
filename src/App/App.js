@@ -6,7 +6,7 @@ import AsteroidCard from '../AsteroidCard/AsteroidCard'
 import NotFound from '../NotFound/NotFound'
 import './App.css';
 import { getPhoto } from '../apiCalls';
-import React, {useState, useEffect} from 'react'
+import React, { useState, useEffect } from 'react'
 import dailyPhoto from '../MockData/dailyPhoto'
 import asteroidsData from '../MockData/asteroids'
 import DateObject from "react-date-object";
@@ -17,34 +17,37 @@ function App() {
   const [photo, setPhoto] = useState({})
   const [asteroids, setAsteroids] = useState([])
   const [asteroidDate, setDate] = useState('')
-  
 
-useEffect(() => {
-  updatePhoto()
-  findAsteroids()
-  findDate()
-}, [])
+  useEffect(() => {
+    findDate()
+    updatePhoto()
+  }, [])
 
-const findDate = () => {
-  var date = new DateObject()
-  date.setFormat('YYYY-MM-DD')
-  setDate(date.format())
-}
+  useEffect(() => {
+    findAsteroids()
+  }, [asteroidDate])
 
-const updatePhoto = () => {
-  setPhoto(dailyPhoto)
-  isLoading('false')
+  const findDate = () => {
+    var date = new DateObject()
+    date.setFormat('YYYY-MM-DD')
+    // setDate(date.format())
+    setDate('2024-04-13')
+  }
+
+  const updatePhoto = () => {
+    setPhoto(dailyPhoto)
+    // isLoading('false')
     // getPhoto()
     // .then(data => setPhoto(data))
     // .catch(error => console.log(error))
   }
 
-const findAsteroids = () => {
-  setAsteroids(asteroidsData.near_earth_objects)
-  isLoading('false')
-  // getAsteroids(asteroidDate)
-  // insert fetch
-}
+  const findAsteroids = () => {
+    setAsteroids(asteroidsData.near_earth_objects[asteroidDate])
+    isLoading('false')
+    // getAsteroids(asteroidDate)
+    // insert fetch
+  }
 
   return (
     <div className="App">
@@ -52,10 +55,10 @@ const findAsteroids = () => {
       <NavBar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home photo={photo} asteroids={asteroids}/>} />
+          <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading}/>} />
           <Route path="/asteroids" element={<Asteroids />} />
-          <Route path="/asteroids/:id" element={<AsteroidCard />} />
-          <Route path="*" element={<NotFound />}/>
+          {/* <Route path="/asteroids/:id"  /> */}
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
     </div>
