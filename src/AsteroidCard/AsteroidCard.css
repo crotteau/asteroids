@@ -1,4 +1,11 @@
 .asteroid {
     color: white;
-    background-color: rgba(19, 21, 29, 0.785);;
+    background-color: rgba(19, 21, 29, 0.785);
+    padding: 1em;
+    cursor: pointer;
+}
+
+.hazardous {
+    border-style: solid;
+    border-color: red;
 }

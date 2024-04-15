@@ -2,14 +2,15 @@ import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import NavBar from '../NavBar/NavBar'
 import Home from '../Home/Home'
 import Asteroids from '../Asteroids/Asteroids'
-import AsteroidCard from '../AsteroidCard/AsteroidCard'
 import NotFound from '../NotFound/NotFound'
+import AsteroidDetails from '../AsteroidDetails/AsteroidDetails';
 import './App.css';
 import { getPhoto } from '../apiCalls';
 import React, { useState, useEffect } from 'react'
 import dailyPhoto from '../MockData/dailyPhoto'
 import asteroidsData from '../MockData/asteroids'
 import DateObject from "react-date-object";
+
 
 
 function App() {
@@ -55,9 +56,9 @@ function App() {
       <NavBar />
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading}/>} />
-          <Route path="/asteroids" element={<Asteroids asteroids={asteroids}/>} />
-          {/* <Route path="/asteroids/:id"  /> */}
+          <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
+          <Route path="/asteroids" element={<Asteroids asteroids={asteroids} />} />
+          <Route path="/asteroids/:id" element={<AsteroidDetails />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

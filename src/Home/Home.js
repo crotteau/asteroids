@@ -1,26 +1,33 @@
 import AsteroidCard from '../AsteroidCard/AsteroidCard'
 import './Home.css'
 import React, { useState, useEffect } from 'react'
-import { NavLink } from 'react-router-dom'
+import { NavLink, useNavigate } from 'react-router-dom'
 
 
 function Home({ asteroids, photo, loading }) {
     const [homeAsteroids, sliceAsteroids] = useState([])
+    const navigate = useNavigate()
 
     useEffect(() => {
         showAsteroids()
     }, [asteroids])
 
+    const selectAsteroid = (asteroidId) => {
+        navigate(`/asteroids/${asteroidId}`)
+    }
+
     const showAsteroids = () => {
         if (asteroids) {
             const fourAsteroids = asteroids.slice(0, 4).map((asteroid) => {
+
                 return (
-                    <AsteroidCard key={asteroid.id} asteroid={asteroid} />
+                    <AsteroidCard key={asteroid.id} asteroid={asteroid} onClick={() => selectAsteroid(asteroid.id)} />
                 )
             })
             sliceAsteroids(fourAsteroids)
         }
     }
+
 
     if (loading === 'true') {
         return <p className='loading'>Loading...</p>
@@ -39,7 +46,7 @@ function Home({ asteroids, photo, loading }) {
                 <article className='homepage-asteroids'>
                     {homeAsteroids}
                 </article>
-               <NavLink to='/asteroids' className='view-asteroids'>View All</NavLink>
+                <NavLink to='/asteroids' className='view-asteroids'>View All</NavLink>
             </article>
         </section>
     )
