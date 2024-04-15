@@ -14,6 +14,7 @@ import DateObject from "react-date-object";
 
 
 function App() {
+  console.log('rendering!!!!!')
   const [loading, isLoading] = useState('true')
   const [photo, setPhoto] = useState({})
   const [asteroids, setAsteroids] = useState([])
@@ -58,7 +59,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
           <Route path="/asteroids" element={<Asteroids asteroids={asteroids} />} />
-          <Route path="/asteroids/:id" element={<AsteroidDetails />} />
+          <Route path="/asteroids/:id" element={<AsteroidDetails asteroids={asteroids} />} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

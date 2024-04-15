@@ -1,9 +1,12 @@
 import './AsteroidDetails.css'
 import React from 'react'
+import useParams from 'react-router-dom'
+function AsteroidDetails ({asteroids}) {
 
-function AsteroidDetails () {
     return (
-        <h2>Asteroid Details</h2>
+        <article className='asteroid-details'>
+
+        </article>
     )
 }
 
