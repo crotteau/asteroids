@@ -1,0 +1,9 @@
+.all-asteroids-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-auto-rows: 12em;
+    grid-gap: 20px;
+    width: 90vw;
+    background-color: rgba(134, 135, 141, 0.518);
+    padding: 2em;
+}
