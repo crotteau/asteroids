@@ -3,10 +3,10 @@ import React, { useState, useEffect } from 'react'
 import AsteroidCard from '../AsteroidCard/AsteroidCard'
 import { useNavigate } from 'react-router-dom'
 
-function Asteroids({ asteroids }) {
+function Asteroids({ asteroids, loading }) {
     const [allAsteroids, setAllAsteroids] = useState([])
     const navigate = useNavigate()
-
+    console.log(asteroids)
     useEffect(() => {
         showAsteroids()
     }, [asteroids])

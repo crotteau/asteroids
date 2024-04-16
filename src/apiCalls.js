@@ -14,10 +14,10 @@ async function getAsteroids(date) {
     if (!response.ok) {
         throw new Error(`An error has occurred: ${response.status}`)
     }
+    console.log('fetching!!!!!!')
     const asteroids = await response.json()
     return asteroids
 }
-
 
 
 export {
