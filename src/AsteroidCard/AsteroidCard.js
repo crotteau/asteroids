@@ -7,6 +7,7 @@ function AsteroidCard({ asteroid, onClick }) {
         <div className={asteroid.is_potentially_hazardous_asteroid ? 'asteroid hazardous' : 'asteroid not-hazardous'} onClick={onClick}>
             <p>Asteroid: {asteroid.name}</p>
             <p>Close Approach Date: {asteroid.close_approach_data[0].close_approach_date_full}</p>
+            <p>Miss Distance: {parseInt(asteroid.close_approach_data[0].miss_distance.miles).toLocaleString()} miles</p>
             <p>Potentially Hazardous: {asteroid.is_potentially_hazardous_asteroid ? 'Yes, watch out!' : 'No, we\'re safe!'}</p>
         </div>
     )

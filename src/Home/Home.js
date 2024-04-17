@@ -19,9 +19,11 @@ function Home({ asteroids, photo, loading }) {
     const showAsteroids = () => {
         if (asteroids) {
             const fourAsteroids = asteroids.slice(0, 4).map((asteroid) => {
-
                 return (
-                    <AsteroidCard key={asteroid.id} asteroid={asteroid} onClick={() => selectAsteroid(asteroid.id)} />
+                    <AsteroidCard key={asteroid.id}
+                        asteroid={asteroid}
+                        onClick={() => selectAsteroid(asteroid.id)}
+                    />
                 )
             })
             sliceAsteroids(fourAsteroids)
@@ -29,7 +31,7 @@ function Home({ asteroids, photo, loading }) {
     }
 
 
-    if (loading === 'true') {
+    if (loading) {
         return <p className='loading'>Loading...</p>
     }
     return (
