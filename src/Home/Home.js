@@ -31,9 +31,9 @@ function Home({ asteroids, photo, loading }) {
     }
 
 
-    // if (loading) {
-    //     return <p className='loading'>Loading...</p>
-    // }
+    if (loading) {
+        return <p className='loading'>Loading...</p>
+    }
     return (
         <section className='homepage'>
             <article className='daily-photo' style={{ backgroundImage: `url(${photo.url})` }}>

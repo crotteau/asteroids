@@ -2,8 +2,9 @@ import './Asteroids.css'
 import React, { useState, useEffect } from 'react'
 import AsteroidCard from '../AsteroidCard/AsteroidCard'
 import { useNavigate } from 'react-router-dom'
+import ChangeData from '../ChangeData/ChangeData'
 
-function Asteroids({ asteroids, loading }) {
+function Asteroids({ asteroids, changeDate }) {
     const [allAsteroids, setAllAsteroids] = useState([])
     const navigate = useNavigate()
     console.log(asteroids)
@@ -26,9 +27,12 @@ function Asteroids({ asteroids, loading }) {
         }
     }
     return (
-        <section className='all-asteroids-grid'>
-            {allAsteroids}
-        </section>
+        <React.Fragment>
+            <ChangeData changeDate={changeDate}/>
+            <section className='all-asteroids-grid'>
+                {allAsteroids}
+            </section>
+        </React.Fragment>
     )
 }
 

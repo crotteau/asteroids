@@ -22,7 +22,7 @@ function App() {
 
   useEffect(() => {
     if (!asteroidDate) {
-    findDate()
+    findTodaysDate()
     updatePhoto()
     }
   }, [])
@@ -33,13 +33,19 @@ function App() {
     }
   }, [asteroidDate])
   
-  const findDate = () => {
+  const findTodaysDate = () => {
     var date = new DateObject()
     date.setFormat('YYYY-MM-DD')
     // setDate(date.format())
     setDate('2024-04-13')
     console.log('asteroid date', asteroidDate)
   }
+
+  const changeDate = (date) => {
+    setDate(date)
+    console.log(asteroidDate)
+  }
+
   const updatePhoto = () => {
     setPhoto(dailyPhoto)
     // getPhoto()
@@ -48,14 +54,12 @@ function App() {
   }
   
   const findAsteroids = async () => {
-    // setAsteroids(asteroidsData.near_earth_objects[asteroidDate])
+    setAsteroids(asteroidsData.near_earth_objects[asteroidDate])
     isLoading(false)
-    await getAsteroids([asteroidDate])
-    .then(data => 
-      setAsteroids(data.near_earth_objects[asteroidDate]))
-      // .catch(error => console.log(error))
-      console.log('asteroids prop', asteroids)
-      console.log('find asteroids useeffect', asteroidDate)
+    // await getAsteroids([asteroidDate])
+    // .then(data => 
+    //   setAsteroids(data.near_earth_objects[asteroidDate]))
+    //   .catch(error => console.log(error))
   }
   console.log(asteroids)
   return (
@@ -65,8 +69,8 @@ function App() {
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
-          <Route path="/asteroids" element={<Asteroids asteroids={asteroids} loading={loading} />} />
-          <Route path="/asteroids/:id" element={<AsteroidDetails asteroids={asteroids} findDate={findDate} loading={loading}/>} />
+          <Route path="/asteroids" element={<Asteroids asteroids={asteroids} loading={loading} changeDate={changeDate} />} />
+          <Route path="/asteroids/:id" element={<AsteroidDetails asteroids={asteroids} loading={loading}/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
