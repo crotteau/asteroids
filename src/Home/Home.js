@@ -2,7 +2,7 @@ import AsteroidCard from '../AsteroidCard/AsteroidCard'
 import './Home.css'
 import React, { useState, useEffect } from 'react'
 import { NavLink, useNavigate } from 'react-router-dom'
-
+import asteroidImage from '../assets/asteroid.png'
 
 function Home({ asteroids, photo, loading }) {
     const [homeAsteroids, sliceAsteroids] = useState([])
@@ -35,20 +35,23 @@ function Home({ asteroids, photo, loading }) {
         return <p className='loading'>Loading...</p>
     }
     return (
-        <section className='homepage'>
-            <article className='daily-photo' style={{ backgroundImage: `url(${photo.url})` }}>
+        <section className='homepage' style={{ backgroundImage: `url(${asteroidImage})` }}>
+            <article className='daily-photo-container'>
                 <div className='daily-photo-info'>
-                    <h2>Astronomy Picture of the Day</h2>
-                    <h3 className='daily-photo-title'>{photo.title}</h3>
-                    <p className='daily-photo-cite'>{photo.copyright}</p>
-                    <p className='daily-photo-explanation'>{photo.explanation}</p>
-                    <a href={photo.url}>View Fullsize Image</a>
+                    <h2>Astronomy Picture of the Day ==={'>'} </h2>
+                    <h2>(APOD)</h2>
+                    <NavLink to='/apod' className='view-apod'>More Info</NavLink>
                 </div>
-                <h3>Today's Asteroids</h3>
-                <article className='homepage-asteroids'>
+                <img className='daily-photo' src={photo.url} alt='NASA-photo-of-day'></img>
+            </article>
+            <article className='homepage-asteroids'>
+                <div className='homepage-asteroids-header'>
+                    <h3>Today's Asteroids (4 0f {asteroids.length})</h3>
+                    <NavLink to='/asteroids' className='view-asteroids'>View All</NavLink>
+                </div>
+                <div className='homepage-asteroids-container'>
                     {homeAsteroids}
-                </article>
-                <NavLink to='/asteroids' className='view-asteroids'>View All</NavLink>
+                </div>
             </article>
         </section>
     )

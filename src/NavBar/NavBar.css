@@ -1,0 +1,25 @@
+.navbar {
+    font-family: "Aldrich", sans-serif;
+    font-size: x-large;
+    font-weight: 600;
+}
+
+ul {
+    display: flex;
+    justify-content: baseline;
+    list-style-type: none;
+}
+
+li {
+    margin-left: 1vw;
+}
+
+@media screen and (max-width: 500px) {
+    .navbar {
+        font-size: large;
+    }
+    
+   li, ul {
+        padding-left: 10px;
+    }
+}

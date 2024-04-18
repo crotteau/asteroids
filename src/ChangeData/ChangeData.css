@@ -1,3 +1,27 @@
 .change-data {
     color: white;
+    display: flex;
+    justify-content: end;
+    margin: 2vh 4vw;
 }
+
+input, 
+button, 
+select {
+    height: 3em;
+    font-family: "JetBrains Mono", monospace;
+    font-size: medium;
+    font-weight: 500;
+    cursor: pointer;
+}
+
+button {
+    margin: 0em 1em;
+    padding: 0.5em;
+    &:hover {
+        border-style: solid;
+        border-color: magenta;
+    }
+
+}
+

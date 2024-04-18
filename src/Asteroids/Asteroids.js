@@ -9,8 +9,7 @@ function Asteroids({ asteroids, changeDate }) {
     const [sortedAsteroids, sortDirection] = useState([])
     const [sort, setSort] = useState('')
     const navigate = useNavigate()
-    console.log('sort', typeof (sort))
-    console.log('sortedAsteroids', sortedAsteroids)
+
 
     useEffect(() => {
         showAsteroids()

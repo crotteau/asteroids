@@ -1,5 +1,22 @@
-h1 {
-  color: white;
-  text-align: left;
-  margin-left: 2vw;
+header {
+  display: flex;
 }
+
+.main-header {
+  text-decoration: none;
+  color: white;
+  margin-left: 2vw;
+  margin-top: 2vh;
+  font-family: "Aldrich", sans-serif;
+  font-size: 2.5em;
+  font-weight: 500;
+}
+
+@media screen and (max-width: 500px) {
+  .main-header {
+    font-size: large;
+    max-width: 40vw;
+    margin-left: 4vw;
+  }
+}
+
