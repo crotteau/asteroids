@@ -9,11 +9,11 @@
 }
 
 .daily-photo-container {
-    height: 55vh;
+    height: 53vh;
     display: flex;
     flex-direction: row;
     align-items: start;
-    margin-left: 5vw;
+    margin-left: 6vw;
 }
 
 .daily-photo-info {
@@ -42,14 +42,17 @@ a {
     color: white;
 }
 
-h3 {
+.homepage-asteroids-header h3 {
     background-color: rgba(127, 127, 28, 0.923);
     width: fit-content;
     padding: 0.75em;
+    font-size: x-large;
 }
 
 .homepage-asteroids {
     margin-left: 3vw;
+    margin-bottom: 10vh;
+    margin-top: 1vw;
 }
 
 .homepage-asteroids-header {
@@ -63,7 +66,7 @@ h3 {
     width: fit-content;
     padding: 0.5em;
     margin-left: 1em;
-    font-size: large;
+    font-size: larger;
     background-color: rgb(111, 111, 119);
     text-decoration: none;
     cursor: pointer;
@@ -76,7 +79,7 @@ h3 {
 .homepage-asteroids-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 18em;
+    grid-template-rows: 19em;
     grid-gap: 10px;
     width: 70vw;
 }
@@ -85,6 +88,9 @@ h3 {
     .homepage {
         background-size: cover;
         width: 100vw;
+    }
+    h3 {
+        font-size: large;
     }
 
     .daily-photo-container {
@@ -109,8 +115,13 @@ h3 {
         margin: 0px 5px;
     }
 
-    .homepage-asteroids h3 {
+    .homepage-asteroids-header {
+        width: 90vw;
+    }
+
+    .homepage-asteroids-header h3 {
         margin-left: 5px;
+        width: 10em;
     }
 
     .homepage-asteroids-container {
@@ -123,7 +134,8 @@ h3 {
     }
 
     .view-asteroids {
-        margin: 5px;
+        margin: 20px;
+        background-color: rgb(81, 81, 123);
     }
 
 }

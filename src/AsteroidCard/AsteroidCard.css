@@ -1,7 +1,33 @@
 .asteroid {
-    color: white;
-    background-color: rgba(19, 21, 29, 0.785);
+    background-color: rgba(5, 65, 81, 0.773); 
+    background-color: rgba(2, 53, 67, 0.773); 
+    color: rgb(227, 227, 227);
     padding: 1em;
     cursor: pointer;
+    font-size: large;
+    &:hover {
+        border-style: solid;
+        border-color: greenyellow;
+    }
 }
 
+.asteroid h3 {
+    font-size: x-large;
+    text-align: center;
+    color: rgb(180, 120, 120);
+    margin: 0.5em;
+    width: fit-content;
+    background-color: rgb(40, 33, 33);
+    padding: 0.25em;
+}
+
+.hazardous h3 {
+    background-color: rgb(159, 16, 16);
+    color: rgb(169, 153, 153);
+}
+
+span {
+    font-weight: 800;
+    font-size: large;
+    color: rgb(120, 120, 198);
+}
