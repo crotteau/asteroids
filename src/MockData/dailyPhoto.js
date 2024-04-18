@@ -1,12 +1,12 @@
 const dailyPhoto = {
-    "copyright": "Lori Haffelt",
-    "date": "2024-04-13",
-    "explanation": "Only those along the narrow track of the Moon's shadow on April 8 saw a total solar eclipse. But most of North America still saw a partial eclipse of the Sun. From Clearwater, Florida, USA this single snapshot captured multiple images of that more widely viewed celestial event without observing the Sun directly. In the shade of a palm tree, criss-crossing fronds are projecting recognizable eclipse images on the ground, pinhole camera style.  In Clearwater the maximum eclipse phase was about 53 percent.   Solar Eclipse Imagery: Notable Submissions to APOD",
-    "hdurl": "https://apod.nasa.gov/apod/image/2404/pinholepalm.png",
-    "media_type": "image",
-    "service_version": "v1",
-    "title": "Palm Tree Partial Eclipse",
-    "url": "https://apod.nasa.gov/apod/image/2404/2024_Eclipse_05XTan.jpg"
-}
+        "copyright": "\nLin Zixuan\n(Tsinghua U.)\n",
+        "date": "2024-04-17",
+        "explanation": "Not one, but two comets appeared near the Sun during last week's total solar eclipse. The expected comet was Comet 12P/Pons-Brooks, but it was disappointingly dimmer than many had hoped. However, relatively unknown Comet SOHO-5008 also appeared in long duration camera exposures. This comet was the 5008th comet identified on images taken by ESA & NASA's Sun-orbiting SOHO spacecraft.  Likely much smaller, Comet SOHO-5008 was a sungrazer which disintegrated within hours as it passed too near the Sun.  The featured image is not only unusual for capturing two comets during an eclipse, but one of the rare times that a sungrazing comet has been photographed from the Earth's surface. Also visible in the image is the sprawling corona of our Sun and the planets Mercury (left) and Venus (right).  Of these planets and comets, only Venus was easily visible to millions of people in the dark shadow of the Moon that crossed North America on April 8.    Solar Eclipse Imagery: Notable Submissions to APOD",
+        "hdurl": "https://apod.nasa.gov/apod/image/2404/EclipseComets_Zixuan_6105.jpg",
+        "media_type": "image",
+        "service_version": "v1",
+        "title": "Total Eclipse and Comets",
+        "url": "https://apod.nasa.gov/apod/image/2404/EclipseComets_Zixuan_1080.jpg"
+    }
 
 module.exports = dailyPhoto;
