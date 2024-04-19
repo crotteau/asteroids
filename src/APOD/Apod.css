@@ -24,6 +24,7 @@
 
 .apod-daily-image {
     margin: 1em;
+    margin-top: 0em;
     width: 60vw;
     height: fit-content;
 }

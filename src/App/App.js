@@ -20,6 +20,7 @@ function App() {
   const [photo, setPhoto] = useState({})
   const [asteroids, setAsteroids] = useState([])
   const [asteroidDate, setDate] = useState()
+  const [error, setError] = useState('')
 
   useEffect(() => {
     if (!asteroidDate) {
@@ -37,10 +38,10 @@ function App() {
   }, [asteroidDate])
 
   const findTodaysDate = () => {
-    var date = new DateObject()
+    const date = new DateObject()
     date.setFormat('YYYY-MM-DD')
-    // setDate(date.format())
-    setDate('2024-04-13')
+    setDate(date.format())
+    // setDate('2024-04-13')
   }
 
   const changeDate = (date) => {
@@ -48,28 +49,28 @@ function App() {
   }
 
   const updatePhoto = () => {
-    setPhoto(dailyPhoto)
-    // getPhoto()
-    // .then(data => setPhoto(data))
-    // .catch(error => console.log(error))
+    // setPhoto(dailyPhoto)
+    getPhoto()
+    .then(data => setPhoto(data))
+    .catch(error => setError(error))
   }
 
   const findAsteroids = async () => {
-    setAsteroids(asteroidsData.near_earth_objects[asteroidDate])
+    // setAsteroids(asteroidsData.near_earth_objects[asteroidDate])
     isLoading(false)
-    // await getAsteroids([asteroidDate])
-    // .then(data => 
-    //   setAsteroids(data.near_earth_objects[asteroidDate]))
-    //   .catch(error => console.log(error))
+    await getAsteroids([asteroidDate])
+    .then(data => setAsteroids(data.near_earth_objects[asteroidDate]))
+    .catch(error => setError(error))
   }
 
   return (
     <div className="App">
       <BrowserRouter>
         <header>
-          <NavLink to='/' className='main-header'>ASTEROID PATROL</NavLink>
+          <NavLink to='/' className='main-header' onClick={() => findTodaysDate()}>ASTEROID PATROL</NavLink>
           <NavBar />
         </header>
+        {error && <h2 className='error'>*** {error} ***</h2>}
         <Routes>
           <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
           <Route path="/apod" element={<Apod photo={photo} loading={loading} />} />

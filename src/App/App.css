@@ -16,6 +16,11 @@ header {
   font-weight: 500;
 }
 
+.error {
+  text-align: center;
+  font-size: xx-large;
+}
+
 @media screen and (max-width: 500px) {
   .main-header {
     font-size: large;

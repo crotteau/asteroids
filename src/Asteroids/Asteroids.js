@@ -56,6 +56,7 @@ function Asteroids({ asteroids, changeDate }) {
     return (
         <React.Fragment>
             <ChangeData changeDate={changeDate} setSort={setSort} />
+                <h3 className='all-asteroids-number'>Viewing {allAsteroids.length} of {allAsteroids.length}</h3>
             <section className='all-asteroids-grid'>
                 {allAsteroids}
             </section>
