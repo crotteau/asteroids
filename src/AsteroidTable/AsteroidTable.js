@@ -25,6 +25,10 @@ function AsteroidTable({ a }) {
             {
                 key: 'Relative Velocity',
                 value: parseInt(a.close_approach_data[0].relative_velocity.miles_per_hour).toLocaleString() + ' mph'
+            },
+            {
+                key: 'Potentially Hazardous',
+                value: a.is_potentially_hazardous_asteroid ? 'Watch out! This asteroid could be potentially hazardous' : 'This asteroid does not pose a threat!'
             }
         ])
     }, [a])

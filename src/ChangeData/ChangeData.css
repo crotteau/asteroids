@@ -18,7 +18,7 @@ select {
 button {
     margin: 0em 1em;
     padding: 0.5em;
-
+    background-color: rgb(186, 186, 219);
     &:hover {
         border-style: solid;
         border-color: magenta;
