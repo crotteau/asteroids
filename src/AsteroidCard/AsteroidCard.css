@@ -1,8 +1,8 @@
 .asteroid {
-    background-color: rgba(5, 65, 81, 0.773); 
-    background-color: rgba(2, 53, 67, 0.773); 
+    background-color: rgba(8, 43, 47, 0.773); 
     color: rgb(227, 227, 227);
     padding: 1em;
+    height: fit-content;
     cursor: pointer;
     font-size: large;
     &:hover {
@@ -29,5 +29,6 @@
 span {
     font-weight: 800;
     font-size: large;
-    color: rgb(120, 120, 198);
+    color: rgb(105, 105, 196);
+    /* color: white; */
 }

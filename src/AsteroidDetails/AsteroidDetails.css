@@ -3,10 +3,9 @@
 }
 
 .asteroid-details {
-    background-color: black;
-    border-style: solid;
     margin: 3em;
     height: 75vh;
     color: white;
     padding: 2em;
 }
+

@@ -8,7 +8,7 @@
 input,
 button,
 select {
-    height: 3em;
+    min-height: 3em;
     font-family: "JetBrains Mono", monospace;
     font-size: medium;
     font-weight: 500;
