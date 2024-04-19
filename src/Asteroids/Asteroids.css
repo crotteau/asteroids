@@ -18,6 +18,13 @@
     font-size: larger;
 }
 
+.all-asteroids-number {
+    width: 95vw;
+    margin-bottom: 0em;
+    margin-top: 2em;
+    text-align: end;
+}
+
 @media screen and (max-width: 500px) {
     .all-asteroids-grid {
         grid-template-columns: 1fr;
