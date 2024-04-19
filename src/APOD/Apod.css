@@ -1,1 +1,82 @@
+.apod {
+    display: flex;
+    align-items: start;
+    background-size: 150vw;
+    margin-top: 2em;
+    min-height: 100vh;
+}
 
+.apod h2 {
+    background-color: rgb(106, 113, 68);
+    width: fit-content;
+    padding: 0.5em;
+    margin-top: 0em;
+}
+
+.apod-photo-info {
+    height: fit-content;
+    font-size: large;
+    margin-left: 1em;
+    padding: 2em;
+    background-color: rgba(1, 65, 9, 0.864);
+    color: rgb(216, 216, 216);
+}
+
+.apod-daily-image {
+    margin: 1em;
+    width: 60vw;
+    height: fit-content;
+}
+
+.view-fullsize-apod,
+.go-back {
+    display: inline-block;
+    height: fit-content;
+    width: fit-content;
+    padding: 0.5em;
+    font-size: larger;
+    background-color: rgb(111, 111, 119);
+    text-decoration: none;
+    cursor: pointer;
+
+    &:hover {
+        border-style: solid;
+        border-color: magenta;
+    }
+}
+
+.go-back {
+    margin-left: 1em;
+    margin-top: 1em;
+    background-color: rgba(76, 98, 111, 0.864)
+}
+
+@media screen and (max-width: 1100px) {
+    .apod {
+        flex-direction: column;
+        align-items: left;
+    }
+
+    .apod-photo-info {
+        width: 90vw;
+    }
+
+    .apod-daily-image {
+        width: 95vw;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .apod {
+        background-size: cover;
+    }
+
+    .apod-photo-info {
+        width: 73vw;
+    }
+
+    .apod-daily-image {
+        width: 95vw;
+    }
+
+}

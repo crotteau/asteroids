@@ -3,10 +3,24 @@
 }
 
 .asteroid-details {
-    background-color: black;
-    border-style: solid;
     margin: 3em;
     height: 75vh;
     color: white;
     padding: 2em;
+}
+
+.asteroid-misc p {
+    font-size: larger;   
+}
+
+.asteroid-misc button {
+    margin-left: 0px;
+    margin-bottom: 1em;
+    font-size: larger;
+}
+
+@media screen and (max-width: 500px) {
+    .asteroid-misc p {
+        width: 85vw; 
+    }
 }

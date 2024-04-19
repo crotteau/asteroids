@@ -1,0 +1,36 @@
+.data-table {
+    width: 70vw;
+}
+
+.rdt_TableCell {
+    font-size: x-large;
+    padding: 0.25em 0em;
+}
+
+.rdt_TableRow:hover {
+    background-color: rgba(179, 179, 44, 0.648);
+}
+
+.sc-csKJxZ {
+    font-size: xx-large;
+    padding: 0.5em 0em;
+}
+
+@media screen and (max-width: 500px) {
+    .data-table {
+        width: 85vw;
+    }
+
+    .asteroid-details {
+        margin: 0px;
+    }
+
+    .rdt_TableCell {
+        font-size: larger;
+        padding: 0.25em 0em;
+    }
+
+    .sc-csKJxZ {
+        font-size: x-large;
+    }
+}
