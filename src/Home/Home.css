@@ -33,6 +33,8 @@
     width: 48vw;
     margin-top: 2em;
     margin-left: 3em;
+    max-height: 58vh;
+    object-fit: cover;
 }
 
 h2,
