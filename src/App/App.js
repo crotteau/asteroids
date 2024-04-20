@@ -1,19 +1,16 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
-import NavBar from '../NavBar/NavBar'
-import Home from '../Home/Home'
-import Asteroids from '../Asteroids/Asteroids'
-import NotFound from '../NotFound/NotFound'
-import AsteroidDetails from '../AsteroidDetails/AsteroidDetails';
-import './App.css';
-import { getPhoto } from '../apiCalls';
-import React, { useState, useEffect } from 'react'
-import dailyPhoto from '../MockData/dailyPhoto'
-import asteroidsData from '../MockData/asteroidsData'
+import React, { useState, useEffect } from 'react';
+import { getPhoto, getAsteroids } from '../apiCalls';
 import DateObject from "react-date-object";
-import Apod from '../APOD/Apod'
-import { getAsteroids } from '../apiCalls';
-
-
+import NavBar from '../NavBar/NavBar';
+import Home from '../Home/Home';
+import Asteroids from '../Asteroids/Asteroids';
+import NotFound from '../NotFound/NotFound';
+import AsteroidDetails from '../AsteroidDetails/AsteroidDetails';
+import Apod from '../APOD/Apod';
+import './App.css';
+// import dailyPhoto from '../MockData/dailyPhoto'
+// import asteroidsData from '../MockData/asteroidsData'
 function App() {
   console.log('rendering!!!!!')
   const [loading, isLoading] = useState(true)
@@ -41,7 +38,6 @@ function App() {
     const date = new DateObject()
     date.setFormat('YYYY-MM-DD')
     setDate(date.format())
-    // setDate('2024-04-13')
   }
 
   const changeDate = (date) => {
@@ -51,31 +47,31 @@ function App() {
   const updatePhoto = () => {
     // setPhoto(dailyPhoto)
     getPhoto()
-    .then(data => setPhoto(data))
-    .catch(error => setError(error))
+      .then(data => setPhoto(data))
+      .catch(error => setError(error))
   }
 
   const findAsteroids = async () => {
     // setAsteroids(asteroidsData.near_earth_objects[asteroidDate])
-    isLoading(false)
     await getAsteroids([asteroidDate])
-    .then(data => setAsteroids(data.near_earth_objects[asteroidDate]))
-    .catch(error => setError(error))
+      .then(data => setAsteroids(data.near_earth_objects[asteroidDate]))
+      .catch(error => setError(error))
+    isLoading(false)
   }
 
   return (
     <div className="App">
       <BrowserRouter>
         <header>
-          <NavLink to='/' className='main-header' onClick={() => findTodaysDate()}>ASTEROID PATROL</NavLink>
+          <NavLink to="/" className="main-header" onClick={() => findTodaysDate()}>ASTEROID PATROL</NavLink>
           <NavBar />
         </header>
-        {error && <h2 className='error'>*** {error} ***</h2>}
+        {error && <h2 className="error">*** {error} ***</h2>}
         <Routes>
           <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
-          <Route path="/apod" element={<Apod photo={photo} loading={loading} />} />
-          <Route path="/asteroids" element={<Asteroids asteroids={asteroids} loading={loading} changeDate={changeDate} />} />
-          <Route path="/asteroids/:id" element={<AsteroidDetails asteroids={asteroids} loading={loading} />} />
+          <Route path="/apod" element={<Apod photo={photo} />} />
+          <Route path="/asteroids" element={<Asteroids asteroids={asteroids} changeDate={changeDate} />} />
+          <Route path="/asteroids/:id" element={<AsteroidDetails asteroids={asteroids}/>} />
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>

@@ -1,5 +1,6 @@
-import './ChangeData.css'
-import React, {useState} from 'react'
+import './ChangeData.css';
+import React, {useState} from 'react';
+import PropTypes from 'prop-types';
 
 function ChangeData({changeDate, setSort}) {
     const [newDate, updateDate] = useState('')
@@ -16,17 +17,22 @@ function ChangeData({changeDate, setSort}) {
     }
 
     return (
-        <section className='change-data'>
-            <input name='date' type='date' value={newDate} onChange={event => updateDate(event.target.value)}></input>
-            <button className='change-date-submit' onClick={event => submitDate(event)}>View Date</button>
-            <select name='sort' value={sortDirection} onChange={event => chooseSort(event.target.value)}>
+        <section className="change-data">
+            <input name="date" type="date" value={newDate} onChange={event => updateDate(event.target.value)}></input>
+            <button className="change-date-submit" onClick={event => submitDate(event)}>View Date</button>
+            <select name="sort" value={sortDirection} onChange={event => chooseSort(event.target.value)}>
                 <option>Sort by Distance</option>
-                <option value='closest'>Closest to Furthest</option>
-                <option value='furthest'>Furthest to Closest</option>
+                <option value="closest">Closest to Furthest</option>
+                <option value="furthest">Furthest to Closest</option>
             </select>
-            <button className='change-sort' onClick={event => updateSort(event)}>Sort Asteroids</button>
+            <button className="change-sort" onClick={event => updateSort(event)}>Sort Asteroids</button>
         </section>
     )
 }
 
 export default ChangeData;
+
+ChangeData.propTypes = {
+    changeDate: PropTypes.func.isRequired,
+    setSort: PropTypes.func.isRequired
+}
