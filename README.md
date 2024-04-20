@@ -40,6 +40,6 @@ A major win for this project was feeling capable to create a React App using asy
 
 ## Future Directions 
 - Update all asteroids display for improved readibility and accessibility
-- Implement additional sort and filter features to all asteroids display: sort by size and filter by isHazardous
+- Implement additional sort and filter features to all asteroids display: sort by size and filter by if it is hazardous
 - Refactor code for enhanced performance and loading 
 - Enhance CSS styling for mobile devices
