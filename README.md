@@ -30,7 +30,7 @@ I used Cypress to implement E2E testing for this app. To run the tests:
 - `npm start` and open http://localhost:3000 in your browser
 - `npm run cypress:open` will start Cypress and open up test window
 - click `E2E testing`
-- when finished, run `ctrl + c` to stop running local server
+- when finished, `ctrl + c` to stop running local server
   
 ## Background
 The goal of this project was to showcase my knowledge of React, Router, Asynchrounous JavaScript, and E2E testing with Cypress. I'm currently 5 months in to a front end program at Turing's School of Software and design and spent ~35hrs over the past week creating this project. 
