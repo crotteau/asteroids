@@ -1,6 +1,8 @@
-import React, { useState, useEffect } from "react"
-import DataTable from 'react-data-table-component'
-import './AsteroidTable.css'
+import React, { useState, useEffect } from 'react';
+import DataTable from 'react-data-table-component';
+import './AsteroidTable.css';
+import PropTypes from 'prop-types';
+
 function AsteroidTable({ a }) {
     const [data, setData] = useState()
     useEffect(() => {
@@ -55,3 +57,14 @@ function AsteroidTable({ a }) {
 }
 
 export default AsteroidTable;
+
+AsteroidTable.propTypes = {
+    a: PropTypes.shape({
+        name: PropTypes.string,
+        nasa_jpl_url: PropTypes.string,
+        is_potentially_hazardous_asteroid: PropTypes.string,
+        estimated_diameter: PropTypes.object,
+        is_potentially_hazardous_asteroid: PropTypes.bool,
+        close_approach_data: PropTypes.array
+    }).isRequired
+}

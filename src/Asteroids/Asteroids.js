@@ -1,9 +1,10 @@
-import './Asteroids.css'
-import React, { useState, useEffect } from 'react'
-import AsteroidCard from '../AsteroidCard/AsteroidCard'
-import { useNavigate } from 'react-router-dom'
-import ChangeData from '../ChangeData/ChangeData'
-import asteroidImage2 from '../assets/asteroid2.png'
+import './Asteroids.css';
+import React, { useState, useEffect } from 'react';
+import AsteroidCard from '../AsteroidCard/AsteroidCard';
+import { useNavigate } from 'react-router-dom';
+import ChangeData from '../ChangeData/ChangeData';
+import asteroidImage2 from '../assets/asteroid2.png';
+import PropTypes from 'prop-types';
 
 function Asteroids({ asteroids, changeDate }) {
     const [allAsteroids, setAllAsteroids] = useState([])
@@ -27,19 +28,18 @@ function Asteroids({ asteroids, changeDate }) {
     const sortAsteroids = () => {
         if (sort === 'closest') {
             const sorted = [...asteroids].sort((a, b) => {
-                const distanceA = parseInt(a.close_approach_data[0].miss_distance.miles);
-                const distanceB = parseInt(b.close_approach_data[0].miss_distance.miles);
-                console.log(distanceA)
-                return distanceA - distanceB;
+                const distanceA = parseInt(a.close_approach_data[0].miss_distance.miles)
+                const distanceB = parseInt(b.close_approach_data[0].miss_distance.miles)
+                return distanceA - distanceB
             });
-            sortDirection(sorted);
+            sortDirection(sorted)
         } else if (sort === 'furthest') {
             const sorted = [...asteroids].sort((a, b) => {
-                const distanceA = parseInt(a.close_approach_data[0].miss_distance.miles);
-                const distanceB = parseInt(b.close_approach_data[0].miss_distance.miles);
+                const distanceA = parseInt(a.close_approach_data[0].miss_distance.miles)
+                const distanceB = parseInt(b.close_approach_data[0].miss_distance.miles)
                 return distanceB - distanceA;
             });
-            sortDirection(sorted);
+            sortDirection(sorted)
         } else {
             sortDirection(asteroids)
         }
@@ -56,11 +56,11 @@ function Asteroids({ asteroids, changeDate }) {
 
     return (
         <React.Fragment>
-            <img className='flying-asteroid' src={asteroidImage2} alt='asteroid'></img>
-            <img className='flying-asteroid2' src={asteroidImage2} alt='asteroid'></img>
+            <img className="flying-asteroid" src={asteroidImage2} alt="asteroid"></img>
+            <img className="flying-asteroid2" src={asteroidImage2} alt="asteroid"></img>
             <ChangeData changeDate={changeDate} setSort={setSort} />
-            <h3 className='all-asteroids-number'>Viewing {allAsteroids.length} of {allAsteroids.length}</h3>
-            <section className='all-asteroids-grid'>
+            <h3 className="all-asteroids-number">Viewing {allAsteroids.length} of {allAsteroids.length}</h3>
+            <section className="all-asteroids-grid">
                 {allAsteroids}
             </section>
         </React.Fragment>
@@ -68,3 +68,16 @@ function Asteroids({ asteroids, changeDate }) {
 }
 
 export default Asteroids;
+
+Asteroids.propTypes = {
+    asteroids: PropTypes.arrayOf(PropTypes.shape({
+        name: PropTypes.string,
+        nasa_jpl_url: PropTypes.string,
+        is_potentially_hazardous_asteroid: PropTypes.string,
+        estimated_diameter: PropTypes.object,
+        is_potentially_hazardous_asteroid: PropTypes.bool,
+        close_approach_data: PropTypes.array
+    }).isRequired
+    ),
+    changeDate: PropTypes.func.isRequired
+}
