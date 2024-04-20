@@ -6,7 +6,7 @@ import ChangeData from '../ChangeData/ChangeData';
 import asteroidImage2 from '../assets/asteroid2.png';
 import PropTypes from 'prop-types';
 
-function Asteroids({ asteroids, changeDate }) {
+function Asteroids({ asteroids, changeDate, loading }) {
     const [allAsteroids, setAllAsteroids] = useState([])
     const [sortedAsteroids, sortDirection] = useState([])
     const [sort, setSort] = useState('')
@@ -53,7 +53,9 @@ function Asteroids({ asteroids, changeDate }) {
         })
         setAllAsteroids(allAsteroids)
     }
-
+    if (loading) {
+        return <p className="loading">Loading...</p>
+    }
     return (
         <React.Fragment>
             <img className="flying-asteroid" src={asteroidImage2} alt="asteroid"></img>
@@ -79,5 +81,6 @@ Asteroids.propTypes = {
         close_approach_data: PropTypes.array
     }).isRequired
     ),
-    changeDate: PropTypes.func.isRequired
+    changeDate: PropTypes.func.isRequired,
+    loading: PropTypes.bool.isRequired
 }

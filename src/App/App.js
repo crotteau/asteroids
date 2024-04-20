@@ -21,15 +21,14 @@ function App() {
 
   useEffect(() => {
     if (!asteroidDate) {
-      console.log('fetching photo')
       findTodaysDate()
-      updatePhoto()
     }
   }, [])
 
   useEffect(() => {
     if (asteroidDate) {
       console.log('fetching asteroids')
+      updatePhoto()
       findAsteroids()
     }
   }, [asteroidDate])
@@ -44,39 +43,49 @@ function App() {
     setDate(date)
   }
 
-  const updatePhoto = () => {
+  const updatePhoto = async () => {
     // setPhoto(dailyPhoto)
-    getPhoto()
-      .then(data => setPhoto(data))
-      .catch(error => setError(error))
-  }
-
-  const findAsteroids = async () => {
-    // setAsteroids(asteroidsData.near_earth_objects[asteroidDate])
-    await getAsteroids([asteroidDate])
-      .then(data => setAsteroids(data.near_earth_objects[asteroidDate]))
-      .catch(error => setError(error))
+    try {
+      const response = await getPhoto()
+      if (response) {
+        setPhoto(response)
+      }
+    } catch (error) {
+      setError(error)
+    }
     isLoading(false)
   }
 
-  return (
-    <div className="App">
-      <BrowserRouter>
-        <header>
-          <NavLink to="/" className="main-header" onClick={() => findTodaysDate()}>ASTEROID PATROL</NavLink>
-          <NavBar />
-        </header>
-        {error && <h2 className="error">*** {error} ***</h2>}
-        <Routes>
-          <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
-          <Route path="/apod" element={<Apod photo={photo} />} />
-          <Route path="/asteroids" element={<Asteroids asteroids={asteroids} changeDate={changeDate} />} />
-          <Route path="/asteroids/:id" element={<AsteroidDetails asteroids={asteroids}/>} />
-          <Route path="*" element={<NotFound />} />
-        </Routes>
-      </BrowserRouter>
-    </div>
-  );
+  const findAsteroids = async () => {
+    try {
+      const response = await getAsteroids([asteroidDate])
+      if (response) {
+        setAsteroids(response.near_earth_objects[asteroidDate])
+      }
+    } catch (error) {
+      setError(error)
+    }
+    isLoading(false)
+  }
+
+return (
+  <div className="App">
+    <BrowserRouter>
+      <header>
+        <NavLink to="/" className="main-header" onClick={() => findTodaysDate()}>ASTEROID PATROL</NavLink>
+        <NavBar />
+      </header>
+      {error && <h2 className="error">{error.message}</h2>}
+      <Routes>
+        <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
+        <Route path="/apod" element={<Apod photo={photo} />} />
+        <Route path="/asteroids" element={<Asteroids asteroids={asteroids} changeDate={changeDate} loading={loading} />} />
+        <Route path="/asteroids/:id" element={<AsteroidDetails asteroids={asteroids} />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </BrowserRouter>
+  </div>
+);
 }
 
 export default App;
