@@ -47,7 +47,7 @@ function Home({ asteroids, photo, loading }) {
             </article>
             <article className="homepage-asteroids">
                 <div className="homepage-asteroids-header">
-                    <h3>Today's Asteroids</h3>
+                    <h3>Today's Asteroids ({homeAsteroids.length} of {asteroids.length})</h3>
                     <NavLink to="/asteroids" className="view-asteroids">View All</NavLink>
                 </div>
                 <div className="homepage-asteroids-container">

@@ -75,7 +75,7 @@ return (
         <NavLink to="/" className="main-header" onClick={() => findTodaysDate()}>ASTEROID PATROL</NavLink>
         <NavBar />
       </header>
-      {error && <h2 className="error">*** {error} ***</h2>}
+      {error && <h2 className="error">{error.message}</h2>}
       <Routes>
         <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
         <Route path="/apod" element={<Apod photo={photo} />} />
