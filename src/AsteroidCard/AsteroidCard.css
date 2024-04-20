@@ -1,12 +1,12 @@
 .asteroid {
-    background-color: rgba(8, 43, 47, 0.891); 
-    /* background-color: rgb(146, 152, 134); */
+    background-color: rgba(8, 43, 47, 0.891);
     color: rgb(231, 239, 255);
     padding: 1em;
     height: fit-content;
     cursor: pointer;
     font-size: large;
     z-index: 2;
+
     &:hover {
         border-style: solid;
         border-color: greenyellow;

@@ -1,14 +1,14 @@
 import './ChangeData.css';
-import React, {useState} from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
-function ChangeData({changeDate, setSort}) {
+function ChangeData({ changeDate, setSort }) {
     const [newDate, updateDate] = useState('')
     const [sortDirection, chooseSort] = useState('')
 
     const submitDate = (event) => {
         event.preventDefault()
-         changeDate(newDate)
+        changeDate(newDate)
     }
 
     const updateSort = (event) => {

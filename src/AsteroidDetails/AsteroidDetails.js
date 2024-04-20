@@ -41,7 +41,7 @@ function AsteroidDetails({ asteroids }) {
     }
 
     return (
-        <article className='asteroid-details' style={{ backgroundImage: `url(${asteroidImage})` }}>
+        <article className="asteroid-details" style={{ backgroundImage: `url(${asteroidImage})` }}>
             <h2>Asteroid - {a.name}</h2>
             <div className="asteroid-size">
                 <AsteroidTable a={a} />
