@@ -8,13 +8,8 @@
     min-height: 100vh;
 }
 
-.all-asteroids-grid p {
-    font-size: larger;
-}
-
+.all-asteroids-grid p,
 .all-asteroids-grid span {
-    /* color: rgb(9, 9, 86); */
-    color: rgb(69, 70, 58);
     font-size: larger;
 }
 
@@ -23,6 +18,39 @@
     margin-bottom: 0em;
     margin-top: 2em;
     text-align: end;
+}
+
+.flying-asteroid,
+.flying-asteroid2 {
+    z-index: 0;
+    animation: fly 15s infinite;
+    top: 0;
+    left: 0;
+    position: fixed;
+    width: 7vw;
+}
+
+.flying-asteroid2 {
+    animation: fly2 10s infinite;
+    width: 10vw;
+}
+
+@keyframes fly {
+    0%{
+        transform: translate(-30vw, 0vh);
+    }
+    100%{
+        transform: translate(130vw, 30vh);
+    }
+}
+
+@keyframes fly2 {
+    0%{
+        transform: translate(-30vw, 10vh);
+    }
+    100%{
+        transform: translate(130vw, 75vh);
+    }
 }
 
 @media screen and (max-width: 500px) {

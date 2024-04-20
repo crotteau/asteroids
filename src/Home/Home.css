@@ -82,7 +82,7 @@ a {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-template-rows: 19em;
     grid-gap: 10px;
-    width: 70vw;
+    width: 80vw;
 }
 
 @media screen and (max-width: 500px) {

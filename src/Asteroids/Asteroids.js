@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react'
 import AsteroidCard from '../AsteroidCard/AsteroidCard'
 import { useNavigate } from 'react-router-dom'
 import ChangeData from '../ChangeData/ChangeData'
+import asteroidImage2 from '../assets/asteroid2.png'
 
 function Asteroids({ asteroids, changeDate }) {
     const [allAsteroids, setAllAsteroids] = useState([])
@@ -55,8 +56,10 @@ function Asteroids({ asteroids, changeDate }) {
 
     return (
         <React.Fragment>
+            <img className='flying-asteroid' src={asteroidImage2} alt='asteroid'></img>
+            <img className='flying-asteroid2' src={asteroidImage2} alt='asteroid'></img>
             <ChangeData changeDate={changeDate} setSort={setSort} />
-                <h3 className='all-asteroids-number'>Viewing {allAsteroids.length} of {allAsteroids.length}</h3>
+            <h3 className='all-asteroids-number'>Viewing {allAsteroids.length} of {allAsteroids.length}</h3>
             <section className='all-asteroids-grid'>
                 {allAsteroids}
             </section>
