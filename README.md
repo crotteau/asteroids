@@ -39,6 +39,7 @@ The goal of this project was to showcase my knowledge of React, Router, Asynchro
 A major win for this project was feeling capable to create a React App using async JavaScript from start to finish. I enjoyed the freedom to explore any concept and implement it how I saw fit, and despite this being a final project, I still learned a lot more along the way. When I reached my MVP, I continued exploring new React libaries and CSS animations to enhance my project. There was a lot of troubleshooting involved with these new features, but I'm happy with the final product and am excited to continue building upon it.
 
 ## Future Directions 
+- Update all asteroids display for improved readibility and accessibility
 - Implement additional sort and filter features to all asteroids display: sort by size and filter by isHazardous
-- Update all asteroids display for improved readibility
+- Refactor code for enhanced performance and loading 
 - Enhance CSS styling for mobile devices
