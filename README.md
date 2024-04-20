@@ -36,7 +36,7 @@ I used Cypress to implement E2E testing for this app. To run the tests:
 The goal of this project was to showcase my knowledge of React, Router, Asynchrounous JavaScript, and E2E testing with Cypress. I'm currently 5 months in to a front end program at Turing's School of Software and design and spent ~35hrs over the past week creating this project. 
 
 ## Challenges and Wins
-A major win for this project was feeling capable to create a React App using async JavaScript from start to finish. I enjoyed the freedom to explore any concept and implement it how I saw fit, and despite this being a final project, I still learned a lot more along the way. When I reached my MVP, I continued exploring new React libaries and CSS animations to enhance my project. There was a lot of troubleshooting involved with these new features, but I'm happy with the final product and am excited to continue building upon it.
+A major win for this project was feeling capable in creating a React App using async JavaScript from start to finish. I also enjoyed the freedom to explore any concept and implement it how I saw fit, and despite this being a final project, I still learned a lot more along the way. When I reached my MVP, I continued exploring new React libaries and CSS animations to enhance my project. There was a lot of troubleshooting involved with these new features, but I'm happy with the final product and am excited to continue building upon it.
 
 ## Future Directions 
 - Update all asteroids display for improved readibility and accessibility
