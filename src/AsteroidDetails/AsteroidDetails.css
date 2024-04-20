@@ -27,11 +27,13 @@
 .asteroid-size h3 {
     font-size: xx-large;
     font-weight: 800;
-    color: rgb(16, 57, 119);
+    color: rgb(230, 230, 230);
+    margin-bottom: 0.25em;
 }
 
 .asteroid-size p {
     font-size: x-large;
+    margin-top: 0px;
 }
 
 .blue-whale {
