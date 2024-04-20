@@ -18,8 +18,9 @@ li {
     .navbar {
         font-size: large;
     }
-    
-   li, ul {
+
+    li,
+    ul {
         padding-left: 10px;
     }
 }

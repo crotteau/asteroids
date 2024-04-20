@@ -12,7 +12,6 @@ function Asteroids({ asteroids, changeDate, loading }) {
     const [sort, setSort] = useState('')
     const navigate = useNavigate()
 
-
     useEffect(() => {
         showAsteroids()
     }, [sortedAsteroids])
@@ -53,9 +52,11 @@ function Asteroids({ asteroids, changeDate, loading }) {
         })
         setAllAsteroids(allAsteroids)
     }
+
     if (loading) {
         return <p className="loading">Loading...</p>
     }
+
     return (
         <React.Fragment>
             <img className="flying-asteroid" src={asteroidImage2} alt="asteroid"></img>

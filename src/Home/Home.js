@@ -31,10 +31,10 @@ function Home({ asteroids, photo, loading }) {
         }
     }
 
-
     if (loading) {
         return <p className="loading">Loading...</p>
     }
+
     return (
         <section className="homepage" style={{ backgroundImage: `url(${asteroidImage})` }}>
             <article className="daily-photo-container">
@@ -56,7 +56,6 @@ function Home({ asteroids, photo, loading }) {
             </article>
         </section>
     )
-
 }
 
 export default Home;

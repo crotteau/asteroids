@@ -5,8 +5,8 @@ import PropTypes from 'prop-types';
 
 function AsteroidTable({ a }) {
     const [data, setData] = useState()
+    
     useEffect(() => {
-
         setData([
             {
                 key: 'Date of Closest Approach',
@@ -48,10 +48,10 @@ function AsteroidTable({ a }) {
 
     return (
         <article className="data-table">
-        <DataTable
-            columns={columns}
-            data={data}>
-        </DataTable>
+            <DataTable
+                columns={columns}
+                data={data}>
+            </DataTable>
         </article>
     )
 }

@@ -9,10 +9,8 @@ import NotFound from '../NotFound/NotFound';
 import AsteroidDetails from '../AsteroidDetails/AsteroidDetails';
 import Apod from '../APOD/Apod';
 import './App.css';
-// import dailyPhoto from '../MockData/dailyPhoto'
-// import asteroidsData from '../MockData/asteroidsData'
+
 function App() {
-  console.log('rendering!!!!!')
   const [loading, isLoading] = useState(true)
   const [photo, setPhoto] = useState({})
   const [asteroids, setAsteroids] = useState([])
@@ -27,7 +25,6 @@ function App() {
 
   useEffect(() => {
     if (asteroidDate) {
-      console.log('fetching asteroids')
       updatePhoto()
       findAsteroids()
     }
@@ -44,7 +41,6 @@ function App() {
   }
 
   const updatePhoto = async () => {
-    // setPhoto(dailyPhoto)
     try {
       const response = await getPhoto()
       if (response) {
@@ -68,24 +64,24 @@ function App() {
     isLoading(false)
   }
 
-return (
-  <div className="App">
-    <BrowserRouter>
-      <header>
-        <NavLink to="/" className="main-header" onClick={() => findTodaysDate()}>ASTEROID PATROL</NavLink>
-        <NavBar />
-      </header>
-      {error && <h2 className="error">{error.message}</h2>}
-      <Routes>
-        <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
-        <Route path="/apod" element={<Apod photo={photo} />} />
-        <Route path="/asteroids" element={<Asteroids asteroids={asteroids} changeDate={changeDate} loading={loading} />} />
-        <Route path="/asteroids/:id" element={<AsteroidDetails asteroids={asteroids} />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
-    </BrowserRouter>
-  </div>
-);
+  return (
+    <div className="App">
+      <BrowserRouter>
+        <header>
+          <NavLink to="/" className="main-header" onClick={() => findTodaysDate()}>ASTEROID PATROL</NavLink>
+          <NavBar />
+        </header>
+        {error && <h2 className="error">{error.message}</h2>}
+        <Routes>
+          <Route path="/" element={<Home photo={photo} asteroids={asteroids} loading={loading} />} />
+          <Route path="/apod" element={<Apod photo={photo} />} />
+          <Route path="/asteroids" element={<Asteroids asteroids={asteroids} changeDate={changeDate} loading={loading} />} />
+          <Route path="/asteroids/:id" element={<AsteroidDetails asteroids={asteroids} />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

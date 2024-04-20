@@ -36,19 +36,21 @@
 }
 
 @keyframes fly {
-    0%{
+    0% {
         transform: translate(-30vw, 0vh);
     }
-    100%{
+
+    100% {
         transform: translate(130vw, 30vh);
     }
 }
 
 @keyframes fly2 {
-    0%{
+    0% {
         transform: translate(-30vw, 10vh);
     }
-    100%{
+
+    100% {
         transform: translate(130vw, 75vh);
     }
 }

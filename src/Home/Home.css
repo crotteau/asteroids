@@ -76,6 +76,7 @@ a {
     background-color: rgb(111, 111, 119);
     text-decoration: none;
     cursor: pointer;
+
     &:hover {
         border-style: solid;
         border-color: magenta;
@@ -95,6 +96,7 @@ a {
         background-size: cover;
         width: 100vw;
     }
+
     h3 {
         font-size: large;
     }
