@@ -28,6 +28,7 @@ I used Cypress to implement E2E testing for this app. To run the tests:
 - `npm i` to install dependencies
 - `npm start` and open http://localhost:3000 in your browser
 - `npm run cypress:open` will start Cypress and open up test window
+- click `E2E testing`
 - when finished, run `ctrl + c` to stop running local server
   
 ## Background
