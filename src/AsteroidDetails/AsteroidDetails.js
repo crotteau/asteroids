@@ -10,7 +10,7 @@ function AsteroidDetails({ asteroids }) {
     const navigate = useNavigate()
     const [a, setTargetAsteroid] = useState()
     const [size, setSize] = useState()
-    console.log('asteroid details rednering')
+
     useEffect(() => {
         displayAsteroid()
     }, [asteroids])
@@ -38,20 +38,19 @@ function AsteroidDetails({ asteroids }) {
         )
     }
     return (
-        <article className='asteroid-details'>
+        <article className='asteroid-details' style={{ backgroundImage: `url(${asteroidImage})` }}>
+            <h2>Asteroid - {a.name}</h2>
             <AsteroidTable a={a} />
-            <div className='asteroid-misc'>
-                <p><a href={a.nasa_jpl_url}>More info</a> at NASA's Small-Body Database</p>
-                <button onClick={() => { navigate(-1) }}> Return to Asteroids List </button>
-            </div>
             <div className="asteroid-size">
                 <h3>Just how large is this asteroid?</h3>
-                <p>At its largest width, it has a diameter of {size} blue whales</p>
-                {[...Array(size)].map(() => (
-                    <img src={whale} alt="blue-whale" className="blue-whale"></img>
+                <p>At its largest width, it has a diameter of {size} blue whales (~80ft each)</p>
+                {[...Array(size)].map((size) => (
+                    <img src={whale} alt="blue-whale" className="blue-whale" key={size}></img>
                 )
-            )}
+                )}
+                <p><a href={a.nasa_jpl_url}>More info</a> at NASA's Small-Body Database</p>
             </div>
+            <button onClick={() => { navigate(-1) }}> Go Back </button>
         </article>
     )
 }

@@ -7,7 +7,7 @@ function AsteroidTable({ a }) {
 
         setData([
             {
-                key: 'Date of closest approach',
+                key: 'Date of Closest Approach',
                 value: a.close_approach_data[0].close_approach_date_full,
             },
             {
@@ -15,7 +15,7 @@ function AsteroidTable({ a }) {
                 value: parseInt(a.close_approach_data[0].miss_distance.miles).toLocaleString() + ' miles'
             },
             {
-                key: 'Estimated Diameter - Mimimum',
+                key: 'Estimated Diameter - Minimum',
                 value: parseInt(a.estimated_diameter.feet.estimated_diameter_min).toFixed(2) + ' feet'
             },
             {
@@ -35,12 +35,10 @@ function AsteroidTable({ a }) {
 
     const columns = [
         {
-            name: `Asteroid - ${a.name}`,
             selector: row => row.key,
             wrap: true
         },
         {
-            name: '',
             selector: row => row.value,
             wrap: true
         }
