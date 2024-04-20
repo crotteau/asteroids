@@ -1,4 +1,5 @@
 # Asteroid Patrol
+### Deployed Link - [Asteroid Patrol](https://asteroids-blond.vercel.app/)
 
 ## About
 Living on earth, it’s difficult to know what’s flying around us in space. Using a NASA API, Asteroid Patrol makes information on nearby asteroids readily available. Users will be informed on diameter of the asteroid, miss distance (distance from earth), velocity of the asteroid, and more! 
@@ -7,7 +8,6 @@ Living on earth, it’s difficult to know what’s flying around us in space. Us
 - [Megan Crotteau](https://github.com/crotteau)
 
 ## Preview
-### Deployed Link - [Asteroid Patrol](https://asteroids-blond.vercel.app/)
 ![HomePage](https://github.com/crotteau/asteroids/assets/149750476/08731294-d3c4-41a3-8e1c-f2f405664cec)
 ![AsteroidGrid](https://github.com/crotteau/asteroids/assets/149750476/91c48fa8-44ff-49e4-ad45-62e922b6d47b)
 ![AsteroidDetails](https://github.com/crotteau/asteroids/assets/149750476/61b43a80-d500-450f-872a-ed4e16f30306)
