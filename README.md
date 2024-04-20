@@ -9,8 +9,8 @@ Living on earth, it’s difficult to know what’s flying around us in space. Us
 ## Preview
 ### Deployed Link - [Asteroid Patrol](https://asteroids-blond.vercel.app/)
 ![HomePage](https://github.com/crotteau/asteroids/assets/149750476/08731294-d3c4-41a3-8e1c-f2f405664cec)
-![AsteroidGrid](https://github.com/crotteau/asteroids/assets/149750476/f2d5f5b5-73cd-4acd-b320-b3826210e09b)
-![AsteroidDetails](https://github.com/crotteau/asteroids/assets/149750476/ab8f0222-aaf3-4f69-858a-ec7b57c825e6)
+![AsteroidGrid](https://github.com/crotteau/asteroids/assets/149750476/91c48fa8-44ff-49e4-ad45-62e922b6d47b)
+![AsteroidDetails](https://github.com/crotteau/asteroids/assets/149750476/61b43a80-d500-450f-872a-ed4e16f30306)
 
 ## Technologies Used
 <div>
