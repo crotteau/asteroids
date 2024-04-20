@@ -13,21 +13,21 @@
 }
 
 .asteroid-details button {
-    font-size: larger;
+    font-size: x-large;
     margin-top: 1em;
 }
 
 .asteroid-size {
     width: 80vw;
-    padding: 1.25em;
+    padding: 3em;
     margin-top: 1em;
-    background-color: rgb(88, 129, 150);
+    background-color: rgba(78, 90, 96, 0.854);
 }
 
 .asteroid-size h3 {
     font-size: xx-large;
     font-weight: 800;
-    color: rgb(20, 56, 111);
+    color: rgb(16, 57, 119);
 }
 
 .asteroid-size p {
@@ -39,11 +39,14 @@
 }
 
 @media screen and (max-width: 500px) {
-    .asteroid-details h2 {
-        font-size: larger;
+    .asteroid-size {
+        width: 80vw;
+        padding: 1em;
     }
 
-    .asteroid-misc p {
-        width: 85vw; 
+    .asteroid-details h2,
+    .asteroid-size p,
+    .asteroid-size h3 {
+        font-size: larger;
     }
 }

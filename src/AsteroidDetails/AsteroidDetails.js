@@ -39,17 +39,17 @@ function AsteroidDetails({ asteroids }) {
             <p className='loading'>Loading...</p>
         )
     }
-    // style={{ backgroundImage: `url(${asteroidImage})` }}
+
     return (
-        <article className='asteroid-details'>
+        <article className='asteroid-details' style={{ backgroundImage: `url(${asteroidImage})` }}>
             <h2>Asteroid - {a.name}</h2>
-            <AsteroidTable a={a} />
             <div className="asteroid-size">
+                <AsteroidTable a={a} />
                 <h3>Just how large is this asteroid?</h3>
                 <p>At its largest width, it has a diameter of {size} blue whales (~80ft each)</p>
-                {[...Array(size)].map((size) => ( 
-                    <img src={whale} alt="blue-whale" className="blue-whale" key={size}></img>
-                    )
+                {[...Array(size)].map((size, index) => (
+                    <img src={whale} alt="blue-whale" className="blue-whale" key={index} id={size}></img>
+                )
                 )}
                 <p><a href={a.nasa_jpl_url}>More info</a> at NASA's Small-Body Database</p>
             </div>
