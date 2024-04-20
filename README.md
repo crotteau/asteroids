@@ -8,9 +8,9 @@ Living on earth, it’s difficult to know what’s flying around us in space. Us
 
 ## Preview
 ### Deployed Link - [Asteroid Patrol](https://asteroids-blond.vercel.app/)
-![Screenshot 2024-04-20 at 1 50 13 PM](https://github.com/crotteau/asteroids/assets/149750476/08731294-d3c4-41a3-8e1c-f2f405664cec)
-![Screenshot 2024-04-20 at 1 50 39 PM](https://github.com/crotteau/asteroids/assets/149750476/f2d5f5b5-73cd-4acd-b320-b3826210e09b)
-![Screenshot 2024-04-20 at 1 50 58 PM](https://github.com/crotteau/asteroids/assets/149750476/418ab22b-84f2-4409-9a1f-efa09b84ca96)
+![HomePage](https://github.com/crotteau/asteroids/assets/149750476/08731294-d3c4-41a3-8e1c-f2f405664cec)
+![AsteroidGrid](https://github.com/crotteau/asteroids/assets/149750476/f2d5f5b5-73cd-4acd-b320-b3826210e09b)
+![AsteroidDetails](https://github.com/crotteau/asteroids/assets/149750476/ab8f0222-aaf3-4f69-858a-ec7b57c825e6)
 
 ## Technologies Used
 <div>
@@ -19,6 +19,7 @@ Living on earth, it’s difficult to know what’s flying around us in space. Us
   <img src='https://img.shields.io/badge/React-61DAFB.svg?style=for-the-badge&logo=React&logoColor=black' alt='react'/>
   <img src='https://img.shields.io/badge/React%20Router-CA4245.svg?style=for-the-badge&logo=React-Router&logoColor=white' alt='react-router'/>
   <img src='https://img.shields.io/badge/Cypress-69D3A7.svg?style=for-the-badge&logo=Cypress&logoColor=white' alt='cypress'/>
+  <img src='https://img.shields.io/badge/Lighthouse-F44B21.svg?style=for-the-badge&logo=Lighthouse&logoColor=white' alt='lighthouse'/>
 </div>
 
 ## Cypress Testing
@@ -32,8 +33,12 @@ I used Cypress to implement E2E testing for this app. To run the tests:
 - when finished, run `ctrl + c` to stop running local server
   
 ## Background
-
+The goal of this project was to showcase my knowledge of React, Router, Asynchrounous JavaScript, and E2E testing with Cypress. I'm currently 5 months in to a front end program at Turing's School of Software and design and spent ~35hrs over the past week creating this project. 
 
 ## Challenges and Wins
+A major win for this project was feeling capable to create a React App using async JavaScript from start to finish. I enjoyed the freedom to explore any concept and implement it how I saw fit, and despite this being a final project, I still learned a lot more along the way. When I reached my MVP, I continued exploring new React libaries and CSS animations to enhance my project. There was a lot of troubleshooting involved with these new features, but I'm happy with the final product and am excited to continue building upon it.
 
-## Future Directions
+## Future Directions 
+- Implement additional sort and filter features to all asteroids display: sort by size and filter by isHazardous
+- Update all asteroids display for improved readibility
+- Enhance CSS styling for mobile devices
