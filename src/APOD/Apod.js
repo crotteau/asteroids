@@ -21,7 +21,7 @@ function Apod({ photo }) {
             {photo.media_type === "video" ?
                 <div className="apod-daily-image">
                     <iframe
-                        width="600"
+                        width="800"
                         height="500"
                         src={photo.url}
                         title="YouTube video player"

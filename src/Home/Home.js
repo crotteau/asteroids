@@ -46,7 +46,7 @@ function Home({ asteroids, photo, loading }) {
                 {photo.media_type === "video" ?
                     <div className="apod-daily-image">
                         <iframe
-                            width="700"
+                            width="750"
                             height="500"
                             src={photo.url}
                             title="YouTube video player"

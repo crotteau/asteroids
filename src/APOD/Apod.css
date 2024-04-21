@@ -73,10 +73,11 @@
     }
 
     .apod-photo-info {
-        width: 73vw;
+        width: 98vw;
     }
 
     .apod-daily-image {
+        margin-top: 1em;
         width: 95vw;
     }
 
