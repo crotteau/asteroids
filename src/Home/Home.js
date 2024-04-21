@@ -43,7 +43,19 @@ function Home({ asteroids, photo, loading }) {
                     <h2>(APOD)</h2>
                     <NavLink to="/apod" className="view-apod">More Info</NavLink>
                 </div>
-                <img className="daily-photo" src={photo.url} alt="NASA-photo-of-day"></img>
+                {photo.media_type === "video" ?
+                    <div className="apod-daily-image">
+                        <iframe
+                            width="750"
+                            height="500"
+                            src={photo.url}
+                            title="YouTube video player"
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                            allowFullScreen
+                        ></iframe>
+                    </div> :
+                    <img className="apod-daily-image" src={photo.url} alt="NASA-photo-of-day"></img>
+                }
             </article>
             <article className="homepage-asteroids">
                 <div className="homepage-asteroids-header">

@@ -5,7 +5,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 
 function Apod({ photo }) {
+    if (photo.media_type === "video") {
 
+    }
     return (
         <section className="apod" style={{ backgroundImage: `url(${asteroidImage})` }}>
             <article className="apod-photo-info">
@@ -16,7 +18,19 @@ function Apod({ photo }) {
                 <a className="view-fullsize-apod" href={photo.url}>View Fullsize Image</a>
                 <NavLink to="/" className="go-back">Back to Main</NavLink>
             </article>
-            <img className="apod-daily-image" src={photo.url} alt="NASA-photo-of-day"></img>
+            {photo.media_type === "video" ?
+                <div className="apod-daily-image">
+                    <iframe
+                        width="800"
+                        height="500"
+                        src={photo.url}
+                        title="YouTube video player"
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                        allowFullScreen
+                    ></iframe>
+                </div> :
+                <img className="apod-daily-image" src={photo.url} alt="NASA-photo-of-day"></img>
+            }
         </section>
     )
 }
