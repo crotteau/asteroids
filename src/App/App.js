@@ -16,7 +16,7 @@ function App() {
   const [asteroids, setAsteroids] = useState([])
   const [asteroidDate, setDate] = useState()
   const [error, setError] = useState('')
-console.log(photo)
+
   useEffect(() => {
     if (!asteroidDate) {
       findTodaysDate()
