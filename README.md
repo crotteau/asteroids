@@ -8,9 +8,7 @@ Living on earth, it’s difficult to know what’s flying around us in space. Us
 - [Megan Crotteau](https://github.com/crotteau)
 
 ## Preview
-![HomePage](https://github.com/crotteau/asteroids/assets/149750476/08731294-d3c4-41a3-8e1c-f2f405664cec)
-![AsteroidGrid](https://github.com/crotteau/asteroids/assets/149750476/91c48fa8-44ff-49e4-ad45-62e922b6d47b)
-![AsteroidDetails](https://github.com/crotteau/asteroids/assets/149750476/61b43a80-d500-450f-872a-ed4e16f30306)
+![HomePage](https://github.com/crotteau/asteroids/assets/149750476/5031009c-2e8a-4b99-9a8d-c8159b580d1b)
 
 ## Technologies Used
 <div>
