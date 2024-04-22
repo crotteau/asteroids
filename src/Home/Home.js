@@ -44,7 +44,7 @@ function Home({ asteroids, photo, loading }) {
                     <NavLink to="/apod" className="view-apod">More Info</NavLink>
                 </div>
                 {photo.media_type === "video" ?
-                    <div className="apod-daily-image">
+                    <div className="daily-photo">
                         <iframe
                             width="750"
                             height="500"
@@ -54,7 +54,7 @@ function Home({ asteroids, photo, loading }) {
                             allowFullScreen
                         ></iframe>
                     </div> :
-                    <img className="apod-daily-image" src={photo.url} alt="NASA-photo-of-day"></img>
+                    <img className="daily-photo" src={photo.url} alt="NASA-photo-of-day"></img>
                 }
             </article>
             <article className="homepage-asteroids">
