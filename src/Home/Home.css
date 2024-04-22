@@ -36,9 +36,9 @@
 
 .daily-photo {
     width: 48vw;
+    max-height: 58vh;
     margin-top: 2em;
     margin-left: 3em;
-    max-height: 58vh;
     object-fit: cover;
     border-style: solid;
     border-color: rgba(1, 65, 9, 0.864);
