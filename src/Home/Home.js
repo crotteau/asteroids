@@ -38,11 +38,13 @@ function Home({ asteroids, photo, loading }) {
     return (
         <section className="homepage" style={{ backgroundImage: `url(${asteroidImage})` }}>
             <article className="daily-photo-container">
-                <div className="daily-photo-info">
-                    <h2>Astronomy Picture of the Day ==={">"} </h2>
-                    <h2>(APOD)</h2>
-                    <NavLink to="/apod" className="view-apod">More Info</NavLink>
-                </div>
+                <NavLink to="/apod" className="view-apod">
+                    <div className="daily-photo-info">
+                        <h2>Astronomy Picture of the Day ==={">"} </h2>
+                        <h2>(APOD)</h2>
+                        <p>More Info</p>
+                    </div>
+                </NavLink>
                 {photo.media_type === "video" ?
                     <div className="daily-photo">
                         <iframe

@@ -32,6 +32,11 @@
 
 .view-apod {
     font-size: large;
+    text-decoration: none;
+}
+
+.view-apod p {
+    text-decoration: underline;
 }
 
 .daily-photo {
