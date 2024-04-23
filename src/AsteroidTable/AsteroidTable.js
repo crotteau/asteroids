@@ -47,7 +47,7 @@ function AsteroidTable({ a }) {
     ]
 
     return (
-        <article className="data-table">
+        <article className={a.is_potentially_hazardous_asteroid ? 'data-table hazardous' : 'data-table not-hazardous'}>
             <DataTable
                 columns={columns}
                 data={data}>
