@@ -20,6 +20,9 @@ Living on earth, it’s difficult to know what’s flying around us in space. Us
   <img src='https://img.shields.io/badge/Lighthouse-F44B21.svg?style=for-the-badge&logo=Lighthouse&logoColor=white' alt='lighthouse'/>
 </div>
 
+## Local Use
+If you are cloning this to your computer, you'll need an API key. Requesting one is quick and easy! You can do so [here](https://api.nasa.gov/). Once you receive your API key (it should be instant), then go to the apiCalls.js file and replace `${process.env.REACT_APP_NASA_API_KEY}` with your key.
+
 ## Cypress Testing
 I used Cypress to implement E2E testing for this app. To run the tests:
 - `git clone` this [repo](https://github.com/crotteau/asteroids)
@@ -31,7 +34,7 @@ I used Cypress to implement E2E testing for this app. To run the tests:
 - when finished, `ctrl + c` to stop running local server
   
 ## Background
-The goal of this project was to showcase my knowledge of React, Router, Asynchrounous JavaScript, and E2E testing with Cypress. I'm currently 5 months in to a front end program at Turing's School of Software and design and spent ~35hrs over the past week creating this project. 
+The goal of this project was to showcase my knowledge of React, Router, Asynchrounous JavaScript, and E2E testing with Cypress. I'm currently 5 months in to a front end program at Turing's School of Software and design and spent ~40hrs over the past week creating this project. 
 
 ## Challenges and Wins
 A major win for this project was feeling capable in creating a React App using async JavaScript from start to finish. I also enjoyed the freedom to explore any concept and implement it how I saw fit, and despite this being a final project, I still learned a lot more along the way. When I reached my MVP, I continued exploring new React libaries and CSS animations to enhance my project. There was a lot of troubleshooting involved with these new features, but I'm happy with the final product and am excited to continue building upon it.
