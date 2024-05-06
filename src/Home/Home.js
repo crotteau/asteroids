@@ -46,7 +46,7 @@ function Home({ asteroids, photo, loading }) {
                     </div>
                 </NavLink>
                 {photo.media_type === "video" ?
-                    <div className="daily-photo">
+                    <div className="daily-video">
                         <iframe
                             width="750"
                             height="500"

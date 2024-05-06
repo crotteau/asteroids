@@ -39,7 +39,7 @@
     text-decoration: underline;
 }
 
-.daily-photo {
+.daily-photo, .daily-video {
     width: 48vw;
     max-height: 58vh;
     margin-top: 2em;
@@ -49,6 +49,11 @@
     border-color: rgba(1, 65, 9, 0.864);
     border-width: 5px;
 }
+
+.daily-video {
+    width: fit-content;
+}
+
 
 h2,
 h3,
