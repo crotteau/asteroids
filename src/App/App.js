@@ -1,6 +1,7 @@
 import { BrowserRouter, Routes, Route, NavLink } from 'react-router-dom';
 import React, { useState, useEffect } from 'react';
 import { getPhoto, getAsteroids } from '../apiCalls';
+import { Analytics } from "@vercel/analytics/react"
 import DateObject from "react-date-object";
 import NavBar from '../NavBar/NavBar';
 import Home from '../Home/Home';
@@ -80,6 +81,7 @@ function App() {
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <Analytics />
     </div>
   );
 }
